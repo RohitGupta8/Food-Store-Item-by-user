@@ -2,6 +2,7 @@ package com.bl.foodDelivery.Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //Data Layer/ Model Layer
 public class FoodStore {
@@ -31,12 +32,14 @@ public class FoodStore {
         return foodList;
     }
 
-    public FoodItem getFoodItem(String foodName) {
-        for (FoodItem foodItem : foodList) {
-            if (foodName.equals(foodItem.itemName)) {
-                return foodItem;
+    public FoodItem getFoodItem(String name) {
+        for (FoodItem foodName : foodList) {
+            if (name.equals(foodName.itemName)) {
+                return foodName;
             }
         }
         return null;
     }
+
+
 }
