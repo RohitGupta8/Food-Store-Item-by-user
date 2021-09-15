@@ -14,13 +14,6 @@ public class FoodItem {
     public VegType vegType;
     public int price;
 
-    public FoodItem(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public FoodItem() {
-    }
-
     public int getPrice() {return price;}
     public void setPrice(int price) {this.price = price;}
     public void setTaste(Taste tasteChoice) {
@@ -37,13 +30,7 @@ public class FoodItem {
         return "============================\n"+"Item Name = " + itemName +"\nTaste = " + taste + "\nCategory = " + category + "\nType = " + vegType + "\nPrice = Rs." + price+"/-\n===========================\n";
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof FoodItem)) return false;
-        FoodItem foodItem = (FoodItem) o;
-        return itemName.equals(foodItem.itemName);
-    }
+
 
     @Override
     public int hashCode() {

@@ -29,7 +29,7 @@ public class DrivenInterface {
         boolean flag=true;
         Application application = new Application();
         while (flag) {
-            System.out.print("1. To add an item. \n2. To remove an item. \n3. Print the menu. \n4. To edit\n5. to exit\nEnter your choice:  ");
+            System.out.print("1. To add an item. \n2. To remove an item. \n3. Print the menu. \n4. To edit\n5. to exit\nEnter your choice: ");
            int num = sc.nextInt();
            flag = application.handleUserSelection(num);
         }

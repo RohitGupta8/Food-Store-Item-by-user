@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Controller Layer
 
 public class Application {
-    static DrivenInterface drivenInterface =DrivenInterface.getInstance();
+    static DrivenInterface drivenInterface = DrivenInterface.getInstance();
 
     public static void main(String[] args) {
         drivenInterface.showUserMenu();
@@ -39,7 +39,11 @@ public class Application {
                 System.out.println("Enter the name which you want to edit: ");
                 String name = new Scanner(System.in).nextLine();
                 FoodItem food = foodStore.getFoodItem(name);
-                drivenInterface.edit(food);
+                if (food != null) {
+                    drivenInterface.edit(food);
+                } else System.out.println("\nItem not found..........plz enter correct Name.....\n");
+
+
             }
             case 5 -> {
                 System.out.println("\nThanks for Visiting.........");
